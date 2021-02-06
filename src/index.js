@@ -15,9 +15,17 @@ const swagger = require('./config/swagger');
 // Register Swagger
 fastify.register(require('fastify-swagger'), swagger.options);
 
+const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    bufferCommands: false,
+    bufferMaxEntries: 0,
+    useFindAndModify: false
+};
+
 // Connect to DB
 mongoose
-    .connect('mongodb://localhost/car-rest')
+    .connect('mongodb://localhost/car-rest', options)
     .then(() => console.log('MongoDB connected...'))
     .catch((err) => console.log(err));
 
