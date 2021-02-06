@@ -16,3 +16,38 @@ npm start
 
 -   Nodejs
 -   MongoDB
+
+**Request:**
+
+```json
+POST api/cars
+{
+    "title": "Model X",
+    "brand": "Tesla",
+    "price": "100000",
+    "age": "1",
+	 "services": {
+            "state": "United State",
+            "city": "San Diegoo"
+    }
+}
+
+GET api/cars
+
+GET api/cars/:id
+
+PUT api/cars/:id
+{
+    "title": "Model X",
+    "brand": "Tesla",
+    "price": "150000",
+    "age": "1",
+    "services": {
+            "state": "United State",
+            "city": "Las Vegas"
+    }
+}
+
+DELETE api/cars/:id
+
+```
